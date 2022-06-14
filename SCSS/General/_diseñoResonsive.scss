@@ -1,0 +1,38 @@
+/*------responsive design----- */
+// Mapa
+$breackpoints: (
+    sm: 576px ,
+    md: 768px ,
+    lg: 992px ,
+    xl: 1200px 
+);
+
+@mixin desktop-first ($breackpoint) {
+    @if map-has-key($breackpoints, $breackpoint) {
+        @media screen and (max-width: map-get($breackpoints , $breackpoint)) {
+            @content;
+        }
+        
+    } @else {
+        @error "el valor #{ $breackpoint } no ah sido declarado como breackpoints";
+    }
+}
+
+@include desktop-first(xl){
+}
+@include desktop-first(lg) {
+    .main-index{
+        .main-index__text {
+            width: 50%;
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+@include desktop-first(md) {
+}
+@include desktop-first(sm) {  
+}
+
+/*------Fin responsive design----- */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://kit.fontawesome.com/98b9b80e08.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " defer></script> 
+    <script src="../JAVASCRIPT/productosYcarrito.js" defer></script>
+    <title>D´pelos tienda</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <h1 class="logo__nombre">D´pelos</h1>
+        </div>
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link" href="../index.html">Inicio</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="./productos.html">Productos</a>
+            </li>
+        </ul>
+    </header>
+    <main class="main-productos">
+        <section class="productos">
+            <div class="producto">
+            </div>
+            <div class="carrito">
+                <div id="carrito" class="carrito__contenedor carrito__contenedor--ocultar">
+                    <div class="carrito__btn">
+                        <i class="fi fi-br-shopping-cart"></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>cantidad</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="btns">
+                        <button class="btn btn--vaciar">vaciar carrito</button>
+                        <button class="btn btn--comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados</p>
+        <div>
+            <ul class="enlaces">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-map-location-dot"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background: $colorPrincipal;
+
+    .logo {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo__nombre {
+            text-align: center;
+            font-size: 2.5rem;
+            color: $colorSecundario;
+        }
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        width: 30%;
+        align-items: center;
+
+        .menu__item {
+            .menu__link {
+                &:active, &:visited, &:link  {
+                    color: $colorSecundario;
+                }
+            }
+        }
+        
+    }
+}

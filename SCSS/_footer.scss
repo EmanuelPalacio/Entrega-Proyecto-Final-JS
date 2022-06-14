@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid $colorSecundario;
+    background: $colorPrincipal;
+    color: white;
+        .enlaces {
+            
+            li{
+                display: inline;
+                margin: 0 15px;
+             
+            a {
+                color: white;
+                &:active, &:visited, &:link  {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.f-index {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+}
