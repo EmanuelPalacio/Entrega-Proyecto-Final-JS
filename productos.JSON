@@ -4,5 +4,9 @@
     {"nombre": "Hueso", "precio": 250, "id": "P3", "unidad": 0, "imagen": "../IMAGES/productos/hueso.png"},
     {"nombre": "Pelota", "precio": 400, "id": "P4", "unidad": 0, "imagen": "../IMAGES/productos/pelota.png"},
     {"nombre": "Bocadillo", "precio": 500, "id": "P5", "unidad": 0, "imagen": "../IMAGES/productos/Bocadillos.png"},
-    {"nombre": "Correa", "precio": 350, "id": "P6", "unidad": 0, "imagen": "../IMAGES/productos/correa.png"}
+    {"nombre": "Correa", "precio": 350, "id": "P6", "unidad": 0, "imagen": "../IMAGES/productos/correa.png"},
+    {"nombre": "Arnes", "precio": 2500, "id": "P7", "unidad": 0, "imagen": "../IMAGES/productos/Arnes.png"},
+    {"nombre": "Alimento Gatos", "precio": 3000, "id": "P8", "unidad": 0, "imagen": "../IMAGES/productos/alimentoparagatos.png"},
+    {"nombre": "Collar de cuero", "precio": 4000, "id": "P9", "unidad": 0, "imagen": "../IMAGES/productos/collardecuero.png"},
+    {"nombre": "Royal Canin", "precio": 4000, "id": "P10", "unidad": 0, "imagen": "../IMAGES/productos/royalcanin.png"}
 ]
