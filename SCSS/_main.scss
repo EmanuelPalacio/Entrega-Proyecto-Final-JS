@@ -1,7 +1,5 @@
-body-index {
-    position: relative;
-    height: 100vh;
-}
+
+
 .main-productos {
     position: relative;
     display: flex;
@@ -220,6 +218,7 @@ body-index {
     align-items: center;
     padding: 1.5rem 0;
     background: radial-gradient(circle, rgba(178,255,216,1) 35%, rgba(0,255,127,1) 100%);
+    height: 80%;
 
     .main-index__img {
         img {
