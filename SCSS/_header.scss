@@ -27,8 +27,14 @@ header {
                 &:active, &:visited, &:link  {
                     color: $colorSecundario;
                 }
+                &:hover{
+                    color: white;
+                }
             }
+            &:hover{
+                transform: scale(1.2);
         }
         
     }
+}
 }

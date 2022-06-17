@@ -30,6 +30,10 @@ header {
     align-items: center; }
     header .menu .menu__item .menu__link:active, header .menu .menu__item .menu__link:visited, header .menu .menu__item .menu__link:link {
       color: #00ff7f; }
+    header .menu .menu__item .menu__link:hover {
+      color: white; }
+    header .menu .menu__item:hover {
+      transform: scale(1.2); }
 
 body-index {
   position: relative;
@@ -130,6 +134,12 @@ body-index {
         height: 100vh;
         background-color: #ffffff;
         transition: width 2s ease; }
+        .main-productos .productos .carrito .carrito__contenedor img {
+          position: absolute;
+          top: 30px;
+          right: 150px;
+          height: 50px;
+          transition: right 2s ease; }
         .main-productos .productos .carrito .carrito__contenedor .carrito__btn {
           position: absolute;
           display: flex;
@@ -162,10 +172,22 @@ body-index {
           position: absolute;
           bottom: 0;
           margin-bottom: 30px;
-          right: 200px;
+          right: 100px;
           transition: right 2s ease-in-out; }
+          .main-productos .productos .carrito .carrito__contenedor .btns .btn--comprar, .main-productos .productos .carrito .carrito__contenedor .btns .btn--vaciar {
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 5px 20px;
+            margin: 0 15px;
+            transition: all 0.5s ease; }
+          .main-productos .productos .carrito .carrito__contenedor .btns .btn--comprar:hover {
+            background-color: #00ff7f; }
+          .main-productos .productos .carrito .carrito__contenedor .btns .btn--vaciar:hover {
+            background-color: #f15d5d; }
       .main-productos .productos .carrito .carrito__contenedor--ocultar {
         width: 0; }
+        .main-productos .productos .carrito .carrito__contenedor--ocultar img {
+          right: -600px; }
         .main-productos .productos .carrito .carrito__contenedor--ocultar .carrito__btn {
           left: -80px; }
         .main-productos .productos .carrito .carrito__contenedor--ocultar table, .main-productos .productos .carrito .carrito__contenedor--ocultar .btns {
@@ -213,11 +235,6 @@ footer {
       color: white; }
       footer .enlaces li a:active, footer .enlaces li a:visited, footer .enlaces li a:link {
         color: white; }
-
-.f-index {
-  position: sticky;
-  width: 100%;
-  bottom: 0; }
 
 /*------responsive design----- */
 @media screen and (max-width: 992px) {

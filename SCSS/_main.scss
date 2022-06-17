@@ -128,7 +128,14 @@ body-index {
                 height: 100vh;
                 background-color: $colorCarrito;
                 transition: width 2s ease;
-
+                
+                img {
+                    position: absolute;
+                    top: 30px;
+                    right: 150px;
+                    height: 50px;
+                    transition: right 2s ease;
+                }
                 .carrito__btn {
                     position: absolute;
                     display: flex;
@@ -172,13 +179,29 @@ body-index {
                     position: absolute;
                     bottom: 0;
                     margin-bottom: 30px;
-                    right: 200px;
+                    right: 100px;
                     transition: right 2s ease-in-out;
+
+                    .btn--comprar , .btn--vaciar{
+                        border: 1px solid black;
+                        border-radius: 15px;
+                        padding: 5px 20px;
+                        margin: 0 15px;
+                        transition: all 0.5s ease;
+                    }
+                    .btn--comprar:hover{
+                        background-color: $colorSecundario;
+                    }
+                    .btn--vaciar:hover{
+                        background-color: rgb(241, 93, 93);
+                    }
                 }
             }
             .carrito__contenedor--ocultar {
                 width: 0;
-
+                img {
+                    right: -600px;
+                }
                 .carrito__btn {
                     left: -80px;
                 }
