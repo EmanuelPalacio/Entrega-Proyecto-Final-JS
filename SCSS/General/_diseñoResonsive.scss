@@ -19,6 +19,14 @@ $breackpoints: (
 }
 
 @include desktop-first(xl){
+    .main-index{
+        .main-index__text {
+            width: 50%;
+            p {
+                text-align: center;
+            }
+        }
+    }
 }
 @include desktop-first(lg) {
     .main-index{
@@ -31,8 +39,37 @@ $breackpoints: (
     }
 }
 @include desktop-first(md) {
+    .main-index{
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 20px;
+        .main-index__text {
+            width: 80%;
+        }
+    }
+    .f-index {
+        position: static;
+    }
 }
-@include desktop-first(sm) {  
+@include desktop-first(sm) {
+    .main-productos{
+        .productos{
+            .carrito{
+                .carrito__contenedor {
+                    .carrito__btn {
+                        left: 10px;
+                        border: 1px solid black;
+                    }
+                }
+                .carrito__contenedor--ocultar {
+                    .carrito__btn {
+                        left: -80px;
+                        border: none;
+                    }
+            }
+        }
+    }
+}
 }
 
 /*------Fin responsive design----- */

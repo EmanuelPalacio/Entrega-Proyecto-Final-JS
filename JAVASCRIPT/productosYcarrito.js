@@ -9,6 +9,7 @@ const btnVaciarCarrito = document.querySelector(".btn--vaciar");
 const btnCarritoCompra = document.querySelector(".btn--comprar");
 const contenedorProductos = document.querySelector("table tbody");
 const contenedorTotal = document.querySelector("table tfoot");
+let avisoCantidad = document.querySelector(".carrito__btn");
 // FUNCIONES ⬇
 /*  Genera las cards en el HTML */
 const cards = () => {
@@ -58,7 +59,7 @@ const eventosCards = () => {
         )
     };
 }
-const generarCompra = () => {
+const ListaDeCompra = () => {
     contenedorProductos.innerHTML = "";
     contenedorTotal.innerHTML = "";
     totalProductos = [];
@@ -96,18 +97,22 @@ const pedirDatosLocalStorage = () => {
     }
 }
 /* Cargar cantidad seleccionada del producto al carrito y localstorage */
-const eventoCardCargarCarrito = () => {
+const AgregarAlCarrito = () => {
     for (const producto of lista) {
         let cantidad = document.querySelector(`#${producto.id} .acumulador`)
-        let btnComprar = document.querySelector(`#${producto.id} .btn--agregar`);
+        let btnAgregar = document.querySelector(`#${producto.id} .btn--agregar`);
         
-        btnComprar.addEventListener("click", function(){
+        btnAgregar.addEventListener("click", function(){
         producto.unidad = parseInt(cantidad.value);
         localStorage.setItem(`${producto.nombre}`, JSON.stringify(producto));
         carrito = [];
         pedirDatosLocalStorage();
-        generarCompra(carrito);
-        console.log(carrito)
+        ListaDeCompra();
+        avisoCantidad.innerHTML =
+            `
+            <i class="fi fi-br-shopping-cart"></i>
+            <span>${localStorage.length}</span>                        
+            `
         });
     }
 }
@@ -119,7 +124,7 @@ const pedirProductos = async () => {
 
     cards();
     eventosCards();
-    eventoCardCargarCarrito()
+    AgregarAlCarrito();
 }
 const pagar = async () => {
     const productosToMap = carrito.map(Element => {
@@ -151,10 +156,16 @@ const pagar = async () => {
 }
 // Codigo ⬇
 /* si ya hay datos cargados en el localStorage se los paso al array carrito */
-if (localStorage.length != null) {
+if (localStorage.length != 0) {
     pedirDatosLocalStorage();
+    avisoCantidad.innerHTML = 
+            `
+            <i class="fi fi-br-shopping-cart"></i>
+            <span>${localStorage.length}</span>
+                                    
+            `
 }
-generarCompra();
+ListaDeCompra();
 pedirProductos();
 /* desplegar o ocultar carrito de compras */
 carritobtn.addEventListener("click", function(){
@@ -162,7 +173,7 @@ carritobtn.addEventListener("click", function(){
     activar.classList.toggle("carrito__contenedor--ocultar")
     }
 );
-/* Alertas de confirmacion o cancelacion */
+/* confirmacion o cancelacion de compra */
 btnCarritoCompra.addEventListener("click", function (){
     pagar(); 
 });
@@ -182,6 +193,12 @@ btnVaciarCarrito.addEventListener("click", function(){
         contenedorProductos.innerHTML = "";
         contenedorTotal.innerHTML = "";
         localStorage.clear();
+        avisoCantidad.innerHTML = 
+            `
+            <i class="fi fi-br-shopping-cart"></i>
+            <span></span>
+                                    
+            `
         }
     });
 });
